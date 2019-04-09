@@ -10,7 +10,7 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "architect": {
@@ -32,6 +32,11 @@
                 "input": "./node_modules/bootstrap/dist/css/bootstrap.css"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/stylings/"
+              ]
+            },
             "scripts": [],
             "es5BrowserSupport": true
           },

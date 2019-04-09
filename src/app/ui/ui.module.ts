@@ -5,13 +5,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { UiComponent } from './containers/ui/ui.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [UiComponent, HeaderComponent, NavComponent, FooterComponent],
   exports: [UiComponent],
   imports: [
     CommonModule,
-    CoderbaseUiModule
+    CoderbaseUiModule,
+    RouterModule
   ]
 })
 export class UiModule { }
