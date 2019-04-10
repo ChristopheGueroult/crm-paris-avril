@@ -1,0 +1,13 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let item of headers">{{ item }}</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <app-item-prestation *ngFor="let obj of collection" [item]="obj" (changed)="update($event)"></app-item-prestation>
+
+  </tbody>
+</table>
+
