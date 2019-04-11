@@ -10,7 +10,9 @@ import { State } from 'src/app/shared/enums/state.enum';
 export class ItemPrestationComponent implements OnInit {
   @Input() item: Prestation;
   @Output() changed: EventEmitter<any> = new EventEmitter();
+  @Output() selectedChange: EventEmitter<any> = new EventEmitter();
   states = State;
+  selected = false;
   constructor() {
   }
 
@@ -25,6 +27,15 @@ export class ItemPrestationComponent implements OnInit {
         state: event.target.value
       }
     );
+  }
+
+  removeClassRowSelected() {
+    this.selected = false;
+  }
+
+  toggle() {
+    this.selectedChange.emit();
+    this.selected = true;
   }
 
 }

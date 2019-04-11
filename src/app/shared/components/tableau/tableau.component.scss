@@ -1,0 +1,20 @@
+@import 'theme';
+
+#mytab .state-annule {
+  background: lighten($color1, 20);
+}
+#mytab .row-selected {
+  background: darken($light-color, 20);
+}
+#mytab .state-inactif,
+#mytab .state-option {
+  background: $color1;
+}
+#mytab .state-actif,
+#mytab .state-confirme {
+  background: $color2;
+}
+
+#mytab tbody > * {
+  display: contents;
+}
