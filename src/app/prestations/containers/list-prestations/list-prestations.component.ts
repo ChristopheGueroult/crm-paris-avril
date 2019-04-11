@@ -28,8 +28,9 @@ export class ListPrestationsComponent implements OnInit {
 
   }
 
-  update(item: any) {
-    console.log(item);
+  update(obj: any) {
+    // console.log(obj);
+    this.prestationService.update(obj.item, obj.state);
 
   }
 
